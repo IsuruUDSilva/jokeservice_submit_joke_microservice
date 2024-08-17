@@ -10,24 +10,24 @@ export class FirestoreController {
     return this.firestoreService.createDocument(collection, body.id, body);
   }
 
-  @Get('Jokes')
-  async getAllJokes() {
-    const jokes = await this.firestoreService.getAll();
-    return jokes;
-  }
+  // @Get('Jokes')
+  // async getAllJokes() {
+  //   const jokes = await this.firestoreService.getAll();
+  //   return jokes;
+  // }
 
-  @Get(':collection/:id')
-  async getDocument(@Param('collection') collection: string, @Param('id') id: string) {
-    return this.firestoreService.getDocument(collection, id);
-  }
+  // @Get(':collection/:id')
+  // async getDocument(@Param('collection') collection: string, @Param('id') id: string) {
+  //   return this.firestoreService.getDocument(collection, id);
+  // }
 
-  @Put(':collection/:id')
-  async updateDocument(@Param('collection') collection: string, @Param('id') id: string, @Body() body: any) {
-    return this.firestoreService.updateDocument(collection, id, body);
-  }
+  // @Put(':collection/:id')
+  // async updateDocument(@Param('collection') collection: string, @Param('id') id: string, @Body() body: any) {
+  //   return this.firestoreService.updateDocument(collection, id, body);
+  // }
 
-  @Delete(':collection/:id')
-  async deleteDocument(@Param('collection') collection: string, @Param('id') id: string) {
-    return this.firestoreService.deleteDocument(collection, id);
-  }
+  // @Delete(':collection/:id')
+  // async deleteDocument(@Param('collection') collection: string, @Param('id') id: string) {
+  //   return this.firestoreService.deleteDocument(collection, id);
+  // }
 }
